@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Sans-Serif;
+}
+
+.body {
+	margin:0;
+	padding:0;
+}
+
+.container {
+	width:100%;
+	min-height:600px;
+}
+
+.header {
+	background:none;
+}
+
+.sidebar_left {
+	width: 15%;
+	float: left;
+	min-height:600px;
+	background: none;
+}
+
+.content {
+	width:80%;
+	float:left;
+	min-height:600px;
+}
+
+.sidebar_right {
+	width:5%;
+	float:left;
+	background:none;
+}
+
+/* Navigation Menu */
+ul.nav {
+	margin:0;
+	padding:0;
+	list-style:none;
+	width:150px;
+}
+
+ul.nav li {
+	position:relative;
+}
+
+ul.nav li:hover ul {
+	display:block;
+}
+
+ul.nav li ul {
+	position:absolute;
+	left:149px;
+	top:0;
+	display:none;
+}
+
+ul li a {
+	display: block;
+	text-decoration: none;
+	color: #777;
+	background: #fff;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+
+ul.nav a ul.nav a:visited {
+	display:block;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
+	background:#6F7D94;
+	color:#FFF;
+}
+
+/* Page Footer */
+.footer {
+	position:relative;
+	clear:both;
+}
+
+.priceBoxMin {
+	width: 75px;
+}
+
+.priceBoxMax {
+	width: 75px;
+}
+
+.modelBox {
+	width: 300px;
+}
+
+/* Item table */
+table.items {
+	width:auto;
+	margin-left:auto;
+	margin-right:auto;
+	border:none;
+	background:#F0F0F0;
+}
+
+table.filters {
+	width:auto;
+	margin-left:auto;
+	margin-right:auto;
+	border:none;
+	background:#F0F0F0;
+}
+
+table.items td, table.items th {
+	padding:2px;
+}
+
+.dollar {
+	text-align:right;
+}

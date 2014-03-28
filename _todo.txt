@@ -1,0 +1,10 @@
+no data validation
+DONE need filtering on inventory_show.php
+add checkedOut column
+implement history for each item
+make prettier
+user management
+	user creation
+	password/profile editing
+	user deletion
+	permissions

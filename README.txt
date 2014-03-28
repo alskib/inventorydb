@@ -1,0 +1,1 @@
+I created this project for my database management course. It's an inventory system meant for tracking items we have in the computer science department. It was never personally put into production, but I heard that my colleagues are using it now. I think I still have hardcoded passwords in here though. I should fix that.

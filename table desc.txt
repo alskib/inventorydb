@@ -1,0 +1,62 @@
+mysql> desc items;
++-----------------+---------------------------+------+-----+---------+----------------+
+| Field           | Type                      | Null | Key | Default | Extra          |
++-----------------+---------------------------+------+-----+---------+----------------+
+| itemID          | int(11)                   | NO   | PRI | NULL    | auto_increment |
+| asset           | varchar(45)               | NO   | UNI | NULL    |                |
+| manufacturer    | varchar(45)               | YES  |     | NULL    |                |
+| model           | varchar(100)              | YES  |     | NULL    |                |
+| serial          | varchar(45)               | YES  | UNI | NULL    |                |
+| itemCond        | enum('N','G','M','B','D') | YES  |     | NULL    |                |
+| description     | text                      | YES  |     | NULL    |                |
+| acquisitionDate | date                      | YES  |     | NULL    |                |
+| missingDate     | date                      | YES  |     | NULL    |                |
+| lastVerified    | date                      | YES  |     | NULL    |                |
+| price           | decimal(19,2)             | YES  |     | NULL    |                |
+| note            | text                      | YES  |     | NULL    |                |
++-----------------+---------------------------+------+-----+---------+----------------+
+12 rows in set (0.00 sec)
+
+mysql> desc locations;
++---------------------+---------+------+-----+---------+----------------+
+| Field               | Type    | Null | Key | Default | Extra          |
++---------------------+---------+------+-----+---------+----------------+
+| locationID          | int(11) | NO   | PRI | NULL    | auto_increment |
+| locationDescription | text    | YES  |     | NULL    |                |
++---------------------+---------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> desc users;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| userID    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| firstName | varchar(45) | YES  |     | NULL    |                |
+| lastName  | varchar(45) | YES  |     | NULL    |                |
+| email     | varchar(60) | YES  |     | NULL    |                |
+| phone     | char(10)    | YES  |     | NULL    |                |
+| username  | varchar(45) | YES  |     | NULL    |                |
+| password  | char(40)    | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
+mysql> desc files;
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| fileID  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name    | varchar(45) | NO   |     | NULL    |                |
+| type    | varchar(45) | NO   |     | NULL    |                |
+| size    | int(11)     | NO   |     | NULL    |                |
+| content | mediumblob  | NO   |     | NULL    |                |
++---------+-------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> desc itemCondition;
++----------------+---------+------+-----+---------+----------------+
+| Field          | Type    | Null | Key | Default | Extra          |
++----------------+---------+------+-----+---------+----------------+
+| itemCondID     | int(11) | NO   | PRI | NULL    | auto_increment |
+| conditionShort | char(2) | YES  |     | NULL    |                |
++----------------+---------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)

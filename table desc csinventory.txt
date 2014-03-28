@@ -1,0 +1,96 @@
+mysql> desc authorizedusers;
++-------------------+-------------+------+-----+---------+----------------+
+| Field             | Type        | Null | Key | Default | Extra          |
++-------------------+-------------+------+-----+---------+----------------+
+| idauthorizedUsers | int(11)     | NO   | PRI | NULL    | auto_increment |
+| userID            | varchar(45) | YES  |     | NULL    |                |
+| pass              | varchar(32) | YES  |     | NULL    |                |
++-------------------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> desc inventory_check;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| assetNumber  | varchar(45) | NO   |     | NULL    |       |
+| description  | text        | YES  |     | NULL    |       |
+| locationNote | text        | YES  |     | NULL    |       |
+| dateverified | date        | YES  |     | NULL    |       |
+| verifiedBy   | varchar(45) | NO   |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+5 rows in set, 1 warning (0.00 sec)
+
+mysql> desc inventory_list;
++--------------------+---------------+------+-----+---------+-------+
+| Field              | Type          | Null | Key | Default | Extra |
++--------------------+---------------+------+-----+---------+-------+
+| assetNumber        | varchar(45)   | NO   |     | NULL    |       |
+| serialNumber       | varchar(45)   | YES  |     | NULL    |       |
+| organizationNumber | varchar(45)   | NO   |     | 204000  |       |
+| itemCondition      | varchar(45)   | YES  |     | NULL    |       |
+| description        | text          | YES  |     | NULL    |       |
+| acquisitionDate    | date          | YES  |     | NULL    |       |
+| missingDate        | date          | YES  |     | NULL    |       |
+| location           | varchar(45)   | YES  |     | NULL    |       |
+| locationNote       | text          | YES  |     | NULL    |       |
+| dateVerified       | date          | YES  |     | NULL    |       |
+| verifiedBy         | varchar(45)   | NO   |     | NULL    |       |
+| cost               | decimal(19,2) | YES  |     | NULL    |       |
+| note               | text          | YES  |     | NULL    |       |
+| status             | varchar(45)   | YES  |     | NULL    |       |
++--------------------+---------------+------+-----+---------+-------+
+14 rows in set, 1 warning (0.00 sec)
+
+mysql> desc items;
++--------------------+---------------+------+-----+---------+-------+
+| Field              | Type          | Null | Key | Default | Extra |
++--------------------+---------------+------+-----+---------+-------+
+| assetNumber        | varchar(45)   | NO   | PRI | NULL    |       |
+| serialNumber       | varchar(45)   | YES  |     | NULL    |       |
+| organizationNumber | varchar(45)   | NO   |     | 204000  |       |
+| itemCondition      | varchar(45)   | YES  |     | NULL    |       |
+| description        | text          | YES  |     | NULL    |       |
+| acquisitionDate    | date          | YES  |     | NULL    |       |
+| missingDate        | date          | YES  |     | NULL    |       |
+| location           | varchar(45)   | YES  |     | NULL    |       |
+| locationNote       | text          | YES  |     | NULL    |       |
+| dateVerified       | date          | YES  |     | NULL    |       |
+| verifiedBy         | varchar(45)   | NO   |     | NULL    |       |
+| cost               | decimal(19,2) | YES  |     | NULL    |       |
+| note               | text          | YES  |     | NULL    |       |
+| status             | varchar(45)   | YES  |     | NULL    |       |
++--------------------+---------------+------+-----+---------+-------+
+14 rows in set (0.00 sec)
+
+mysql> desc loanedsystems;
++---------------------+-------------+------+-----+---------+----------------+
+| Field               | Type        | Null | Key | Default | Extra          |
++---------------------+-------------+------+-----+---------+----------------+
+| idLoanedSystems     | int(11)     | NO   | PRI | NULL    | auto_increment |
+| issuedSystem        | varchar(45) | NO   | MUL | NULL    |                |
+| issuedTo            | int(11)     | NO   | MUL | NULL    |                |
+| dateIssued          | varchar(45) | YES  |     | NULL    |                |
+| estimatedReturnDate | date        | YES  |     | NULL    |                |
+| dateReturned        | date        | YES  |     | NULL    |                |
+| note                | text        | YES  |     | NULL    |                |
++---------------------+-------------+------+-----+---------+----------------+
+7 rows in set (0.01 sec)
+
+mysql> desc locations;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| code  | varchar(45) | NO   | PRI | NULL    |       |
+| name  | text        | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql> desc people;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| idpeople  | int(11)     | NO   | PRI | NULL    | auto_increment |
+| lastName  | varchar(45) | YES  |     | NULL    |                |
+| firstName | varchar(45) | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
